@@ -2,17 +2,22 @@ package org.kearis.formation.javaee7.chapitre1_1.ex03;
 
 import javax.persistence.*;
 
-
+@Entity
 public class Customer03 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
   private String firstName;
   private String lastName;
   private String email;
+
+  @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+  @JoinColumn(name = "address_fk")
   private Address03 address;
 
   // ======================================

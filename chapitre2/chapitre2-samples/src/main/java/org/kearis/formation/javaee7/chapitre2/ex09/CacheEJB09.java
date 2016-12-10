@@ -2,10 +2,13 @@ package org.kearis.formation.javaee7.chapitre2.ex09;
 
 import javax.ejb.Remote;
 import javax.ejb.Singleton;
+import javax.ejb.Stateful;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
+@Stateful
+@Remote
 public class CacheEJB09 implements CacheEJBRemote09 {
 
   // ======================================

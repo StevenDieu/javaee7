@@ -7,6 +7,7 @@ public class ChronologicalDatesValidator implements ConstraintValidator<Chronolo
 
   @Override
   public void initialize(ChronologicalDates constraintAnnotation) {
+
   }
 
   @Override

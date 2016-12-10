@@ -10,13 +10,17 @@ public class Customer05 {
   // ======================================
   // =             Attributes             =
   // ======================================
-
+  @Email
   private String userId;
+  @NotNull
+  @Size(min = 4,max = 50, message = "Firstname should be between 4 and 50")
   private String firstName;
   private String lastName;
+  @Email(message = "Recovery email is not a valid email address")
   private String recoveryEmail;
   private String phoneNumber;
   private Date dateOfBirth;
+  @Min(value = 18, message = "Customer is too young. Should be older that 18")
   private Integer age;
   private Date creationDate;
 

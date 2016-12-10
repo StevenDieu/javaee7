@@ -1,9 +1,9 @@
 package org.kearis.formation.javaee7.chapitre1.ex60;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
+@AttributeOverride(name="title", column=@Column(name="book_title"))
 public class Book60 extends Item60 {
 
   // ======================================

@@ -12,18 +12,15 @@ public class Order08 {
   // =             Attributes             =
   // ======================================
 
-//  @NotNull(groups = {Creation.class, Payment.class, Delivery.class})
+  @NotNull(groups = {Creation.class, Payment.class, Delivery.class})
   private Long id;
-//  @NotNull(groups = {Creation.class, Payment.class, Delivery.class})
-//  @Past(groups = {Creation.class, Payment.class, Delivery.class})
+  @NotNull(groups = {Creation.class, Payment.class, Delivery.class})
   private Date creationDate;
-//  @NotNull(groups = {Creation.class, Payment.class, Delivery.class})
+  @NotNull(groups = {Creation.class, Payment.class, Delivery.class})
   private Double totalAmount;
-//  @NotNull(groups = {Payment.class, Delivery.class})
-//  @Past(groups = {Payment.class, Delivery.class})
+  @NotNull(groups = {Payment.class, Delivery.class})
   private Date paymentDate;
-//  @NotNull(groups = Delivery.class)
-//  @Past(groups = Delivery.class)
+  @NotNull(groups = Delivery.class)
   private Date deliveryDate;
   private List<OrderLine08> orderLines;
 

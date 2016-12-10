@@ -1,9 +1,6 @@
 package org.kearis.formation.javaee7.chapitre1_2.ex10;
 
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
 
 public class CD10 extends Item10 {
 
@@ -11,12 +8,13 @@ public class CD10 extends Item10 {
   // =             Attributes             =
   // ======================================
 
-//  @Pattern(regexp = "[A-Z][a-z]{1,}", message = "{music.company}")
+  @Pattern(regexp = "[A-Z][a-z]{1,}", message = "{music.company}")
   private String musicCompany;
-//  @Max(value = 5, message = "{number.cds}")
+  @Max(value = 5, message = "{number.cds}")
   private Integer numberOfCDs;
   private Float totalDuration;
-//  @MusicGenre
+  @MusicGenre
+  @Size(min = 15, max = 70)
   private String genre;
 
   // ======================================

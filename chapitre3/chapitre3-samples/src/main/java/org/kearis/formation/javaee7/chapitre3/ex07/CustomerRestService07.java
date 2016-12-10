@@ -1,5 +1,7 @@
 package org.kearis.formation.javaee7.chapitre3.ex07;
 
+import org.glassfish.api.Param;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -9,6 +11,7 @@ import java.util.List;
 
 //TODO add Path
 //TODO produce XML by default
+@Path("/07/customer")
 public class  CustomerRestService07 {
 
   // ======================================
@@ -19,7 +22,9 @@ public class  CustomerRestService07 {
    * curl http://localhost:8080/chapitre3-service-1.0/rs/07/customers/agoncal
    */
   //TODO define action 'search' in path with 'text' as path parameter
-  public List<Customer07> searchCustomers(String textToSearch) {
+  @GET
+  @Path("/search/{textToSearch}")
+  public List<Customer07> searchCustomers(@PathParam("textToSearch") String textToSearch) {
     System.out.println("searchCustomer : " + textToSearch);
     Customers07 customers = new Customers07();
     customers.add(new Customer07("John", "Smith", "jsmith@gmail.com", "1234565", new Date(), new Date()));
@@ -31,6 +36,8 @@ public class  CustomerRestService07 {
    * curl http://localhost:8080/chapitre3-service-1.0/rs/07/customers/agoncal
    */
   //TODO define method to retrieve customer by login only letters are allowed
+  @GET
+  @Path("/{login}")
   public Customer07 getCustomerByLogin(String login) {
     System.out.println("getCustomerByLogin : " + login);
     return new Customer07("John", "Smith", "jsmith@gmail.com", "1234565", new Date(), new Date());
@@ -46,7 +53,8 @@ public class  CustomerRestService07 {
   }
 
   //TODO define method to retrieve customers with zipcode and city (default value is Paris if not given) as query parameters
-  public List<Customer07> getCustomersByZipCodeCity(Long zip, String city) {
+  @GET
+  public List<Customer07> getCustomersByZipCodeCity(@QueryParam("zip") Long zip,@QueryParam("city") String city) {
     System.out.println("getCustomerByZipCodeCity : " + zip + " - " + city);
     List<Customer07> customers = new ArrayList<>();
     customers.add(new Customer07("John", "Smith", "jsmith@gmail.com", "1234565", new Date(), new Date()));
@@ -69,7 +77,7 @@ public class  CustomerRestService07 {
   @Produces(MediaType.TEXT_PLAIN)
   public String extractSessionID(String sessionID) {
     System.out.println("extractSessionID : " + sessionID);
-    return sessionID + " from the server";
+    return sessionID + "This is my cookie from the server";
   }
 
   //TODO define method to extract 'User-Agent' of header
@@ -78,7 +86,7 @@ public class  CustomerRestService07 {
   @Produces(MediaType.TEXT_PLAIN)
   public String extractUserAgent(String userAgent) {
     System.out.println("echoUserAgent : " + userAgent);
-    return userAgent + " from the server";
+    return userAgent + "Jersey/2. from the server";
   }
 
 }

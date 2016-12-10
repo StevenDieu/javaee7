@@ -1,16 +1,16 @@
 package org.kearis.formation.javaee7.chapitre1_1.ex24;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Entity
 public class Address24 {
 
     // ======================================
     // =             Attributes             =
     // ======================================
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String street1;
     private String city;

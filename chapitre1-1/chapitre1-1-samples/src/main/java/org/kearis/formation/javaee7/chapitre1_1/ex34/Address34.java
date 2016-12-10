@@ -2,11 +2,15 @@ package org.kearis.formation.javaee7.chapitre1_1.ex34;
 
 import javax.persistence.*;
 
+@Entity
 public class Address34 {
 
     // ======================================
     // =             Attributes             =
     // ======================================
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String street1;
     private String city;

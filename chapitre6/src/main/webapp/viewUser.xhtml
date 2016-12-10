@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://java.sun.com/jstl/core">
+
+    <h:head>
+        <title>
+            <ui:insert name="title">Ma super appli</ui:insert>
+        </title>
+    </h:head>
+    <h:body>
+
+        <f:metadata>
+            <f:viewParam name="id" value="#{userController.jsfUser.id}"/>
+            <f:viewAction action="#{userController.doFindUser}" />
+        </f:metadata>
+
+
+        <c:if test="#{not empty userController.jsfUser}">
+            <h:outputText value="VIEW USERS : "/>
+
+            <h:panelGrid>
+                <h:outputLabel value="Nom : "/>
+                <h:outputText value="#{userController.jsfUser.name}" />
+                <h:outputLabel value="Prenom : "/>
+                <h:outputText value="#{userController.jsfUser.lastName}" />
+                <h:outputLabel value="Emil : "/>
+                <h:outputText value="#{userController.jsfUser.mail}" />
+                <h:outputLabel value="Mot de passe : "/>
+                <h:outputText value="#{userController.jsfUser.password}" />
+            </h:panelGrid>
+        </c:if>
+        <c:if test="#{empty userController.jsfUser}">
+            TU PIRATES JE TE NIKE !!!
+        </c:if>
+
+
+
+
+    </h:body>
+
+</html>

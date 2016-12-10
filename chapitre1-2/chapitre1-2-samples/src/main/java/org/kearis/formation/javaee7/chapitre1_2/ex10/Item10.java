@@ -11,7 +11,7 @@ public class Item10 {
   // ======================================
 
   protected Long id;
-//  @NotNull
+  @NotNull
 //  @Size(min = 4, max = 50)
   protected String title;
   protected Float price;

@@ -7,6 +7,7 @@ import java.util.concurrent.Future;
 
 @Stateless
 @Remote
+@Asynchronous
 public class OrderEJB15 implements OrderEJBRemote15 {
 
   // ======================================

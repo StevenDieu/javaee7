@@ -2,6 +2,7 @@ package org.kearis.formation.javaee7.chapitre1_1.ex24;
 
 import javax.persistence.*;
 
+@Entity
 public class Customer24 {
 
     public static final String FIND_ALL = "Customer.findAll";
@@ -10,11 +11,16 @@ public class Customer24 {
     // =             Attributes             =
     // ======================================
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String firstName;
     private String lastName;
     private Integer age;
     private String email;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "address_fk")
     private Address24 address;
 
     // ======================================

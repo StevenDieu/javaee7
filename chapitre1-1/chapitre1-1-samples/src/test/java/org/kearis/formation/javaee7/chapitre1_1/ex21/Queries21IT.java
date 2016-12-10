@@ -149,7 +149,7 @@ public class  Queries21IT extends AbstractPersistentTest {
 
   @Test
   public void testJPQL() {
-    Customer21 client = new Customer21("thierry" , "poutrain", "toto@free.fr", 23);
+    Customer21 client = new Customer21("thierry" , "poutrain", "toto2@free.fr", 23);
 
     tx.begin();
     em.persist(client);
@@ -167,6 +167,9 @@ public class  Queries21IT extends AbstractPersistentTest {
     List<Customer21> customers2 = query.getResultList();
     assertEquals(1, customers2.size());
 
+    tx.begin();
+    em.remove(client);
+    tx.commit();
   }
 
   @Test
@@ -184,6 +187,9 @@ public class  Queries21IT extends AbstractPersistentTest {
     List<Customer21> customers2 = query.getResultList();
     assertEquals(1, customers2.size());
 
+    tx.begin();
+    em.remove(client);
+    tx.commit();
   }
 
   @Test

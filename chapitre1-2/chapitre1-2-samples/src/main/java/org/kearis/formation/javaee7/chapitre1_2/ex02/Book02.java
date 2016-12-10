@@ -10,7 +10,10 @@ public class Book02 {
   // =             Attributes             =
   // ======================================
 
+  @NotNull
   private String title;
+  @Min(1)
+  @NotNull
   private Float price;
   private String description;
   private String isbn;

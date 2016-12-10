@@ -1,16 +1,19 @@
 # Introduction : Création du projet
 
-Compléter ce projet dans le but de fournir un formulaire d'inscription pour des utilisateurs avec les technologies JSF.
+Compléter ce projet dans le but de fournir un formulaire d'inscription pour des
+utilisateurs avec les technologies JSF.
 Le livrable (format __war__) sera a déployé dans Glassfish.
 
 # TP1 : Création du Bean
-Créer un simple bean pour stocker le nom saisi par l'utilisateur, puis ajouter les annotations qui permettent :
+Créer un simple bean pour stocker le nom saisi par l'utilisateur, puis ajouter les
+annotations qui permettent :
  
 * De préciser au serveur que ce bean est dorénavant géré par JSF
 * De préciser au serveur que ce bean a pour portée la requête
 
 # TP2 : Création des facelets
-Créer maintenant les vues pour l'application, il s'agit ici de créer 2 facelets (extension __.xhtml__) qui contiennent des
+Créer maintenant les vues pour l'application, il s'agit ici de créer 2 facelets
+(extension __.xhtml__) qui contiennent des
 balises propres à JSF :
  
 * Une première page permet d'afficher un formulaire

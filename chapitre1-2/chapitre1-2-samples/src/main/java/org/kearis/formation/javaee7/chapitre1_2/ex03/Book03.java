@@ -24,7 +24,7 @@ public class Book03 {
   public Book03() {
   }
 
-  public Book03(String title, Float price, String description, String isbn, Integer nbOfPage, Boolean illustrations) {
+  public Book03(@NotNull String title, @Min(2) @NotNull Float price,  String description, String isbn, Integer nbOfPage, Boolean illustrations) {
     this.title = title;
     this.price = price;
     this.description = description;

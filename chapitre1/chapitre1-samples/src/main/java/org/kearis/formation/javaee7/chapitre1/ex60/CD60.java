@@ -1,9 +1,9 @@
 package org.kearis.formation.javaee7.chapitre1.ex60;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
+@AttributeOverride(name="cd", column=@Column(name="cd_title"))
 public class CD60 extends Item60 {
 
   // ======================================

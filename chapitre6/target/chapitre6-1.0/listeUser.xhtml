@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>
+            <ui:insert name="title">Ma super appli</ui:insert>
+        </title>
+    </h:head>
+    <h:body>
+        <h:outputText value="LISTE DES USERS : "/>
+        <h:dataTable value="#{userEJB.findAllUser()}" var="user">
+            <h:column>
+                <h:panelGrid>
+                    <h:outputText value="#{user.id}"/>
+                    <h:outputText value="#{user.name}"/>
+                    <h:outputText value="#{user.lastName}"/>
+                    <h:outputText value="#{user.mail}"/>
+                    <h:outputText value="#{user.password}"/>
+                    <h:link outcome="viewUser.xhtml?id=#{user.id}" value="Voir le user"/>
+                </h:panelGrid>
+            </h:column>
+        </h:dataTable>
+
+    </h:body>
+
+</html>

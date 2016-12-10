@@ -3,6 +3,9 @@ package org.kearis.formation.javaee7.chapitre1.ex56;
 import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorValue(value = "ITEM")
+@DiscriminatorColumn(name = "ITEM_TYPE")
 public class Item56 {
 
   // ======================================

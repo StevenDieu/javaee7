@@ -5,7 +5,7 @@ import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 import org.kearis.formation.javaee7.chapitre1_1.ex21.Address21;
 
-@Generated(value="EclipseLink-2.5.1.v20130918-rNA", date="2016-09-30T14:36:03")
+@Generated(value="EclipseLink-2.5.1.v20130918-rNA", date="2016-10-06T16:14:17")
 @StaticMetamodel(Customer21.class)
 public class Customer21_ { 
 

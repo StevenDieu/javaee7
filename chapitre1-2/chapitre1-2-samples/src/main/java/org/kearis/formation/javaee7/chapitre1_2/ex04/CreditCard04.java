@@ -8,8 +8,11 @@ public class CreditCard04 {
   // =             Attributes             =
   // ======================================
 
+  @NotNull
   private String number;
+  @NotNull
   private String expiryDate;
+  @NotNull
   private Integer controlNumber;
   private String type;
 

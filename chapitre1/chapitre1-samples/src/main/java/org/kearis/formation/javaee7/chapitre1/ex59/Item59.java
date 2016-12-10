@@ -3,6 +3,8 @@ package org.kearis.formation.javaee7.chapitre1.ex59;
 import javax.persistence.*;
 
 @Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "ITEM_TYPE")
 public class Item59 {
 
   // ======================================

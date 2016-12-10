@@ -3,6 +3,8 @@ package org.kearis.formation.javaee7.chapitre1.ex59;
 import org.kearis.formation.javaee7.chapitre1.AbstractPersistentTest;
 import org.junit.Test;
 
+import java.util.Collections;
+
 import static org.junit.Assert.assertNotNull;
 
 public class Item59IT extends AbstractPersistentTest {

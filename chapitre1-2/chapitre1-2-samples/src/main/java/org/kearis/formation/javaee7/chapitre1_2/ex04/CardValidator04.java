@@ -27,7 +27,7 @@ public class CardValidator04 {
   // ======================================
 
 //  @AssertTrue
-  public Boolean validate(CreditCard04 creditCard) {
+  public Boolean validate(@NotNull @Valid CreditCard04 creditCard) {
 
     String lastDigit = validationAlgorithm.validate(creditCard.getNumber(), creditCard.getControlNumber());
 

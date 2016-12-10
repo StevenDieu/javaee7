@@ -7,19 +7,15 @@ import javax.validation.constraints.Pattern;
 import java.util.Date;
 import java.util.List;
 
-//@ChronologicalDates
+@ChronologicalDates
 public class Order06 {
 
   // ======================================
   // =             Attributes             =
   // ======================================
 
-//  @NotNull
-//  @Pattern(regexp = "[C,D,M][A-Z][0-9]*")
   private String orderId;
   private Date creationDate;
-//  @NotNull
-//  @Min(1)
   private Double totalAmount;
   private Date paymentDate;
   private Date deliveryDate;
@@ -40,7 +36,7 @@ public class Order06 {
   // =           Public Methods           =
   // ======================================
 
-  public Double calculateTotalAmount(/*@GreaterThanZero*/ Double changeRate) {
+  public Double calculateTotalAmount(@GreaterThanZero Double changeRate) {
     return 1d;
   }
 

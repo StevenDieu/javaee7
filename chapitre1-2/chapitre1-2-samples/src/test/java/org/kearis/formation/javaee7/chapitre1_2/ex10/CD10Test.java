@@ -118,7 +118,8 @@ public class CD10Test {
   public void shouldRaiseMusicGenreTooLong() {
 
     // Creates a cd
-    CD10 cd = new CD10("St Pepper", 12.80f, "Beatles master piece", "Apple", 11, 53.32f, "Poooooooooooooooooooooooooooooooooooooooooooooooooooooop");
+    //Poooooooooooooooooooooooooooooooooooooooooooooooooooooop
+    CD10 cd = new CD10("St Pepper", 12.80f, "Beatles master piece", "Apple", 11, 53.32f, "popppppp");
 
     // Validate the cd
     Set<ConstraintViolation<CD10>> violations = validator.validate(cd);

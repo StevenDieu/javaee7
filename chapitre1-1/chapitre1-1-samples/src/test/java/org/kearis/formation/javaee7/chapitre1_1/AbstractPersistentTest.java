@@ -1,16 +1,16 @@
 package org.kearis.formation.javaee7.chapitre1_1;
 
-import org.junit.After;
-import org.junit.Before;
+        import org.junit.After;
+        import org.junit.Before;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
-import java.sql.SQLException;
-import java.util.Random;
+        import javax.persistence.EntityManager;
+        import javax.persistence.EntityManagerFactory;
+        import javax.persistence.EntityTransaction;
+        import javax.persistence.Persistence;
+        import java.sql.SQLException;
+        import java.util.Random;
 
-import static org.kearis.formation.javaee7.chapitre1_1.Constants.PERSISTENCE_UNIT_NAME;
+        import static org.kearis.formation.javaee7.chapitre1_1.Constants.PERSISTENCE_UNIT_NAME;
 
 public abstract class AbstractPersistentTest {
 

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+@Stateful
+@Remote
 public class ShoppingCartEJB07 implements ShoppingCartEJBRemote07 {
 
   // ======================================
